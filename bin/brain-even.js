@@ -10,14 +10,13 @@ export const checkingParity = (name) => {
     const answer = readlineSync.question('Your answer: ')
     const parity = randomNumber % 2 === 0 ? 'yes' : 'no'
 
-    if (parity === 'yes' && answer === 'yes') {
+    if (parity === answer) {
       console.log('Correct!')
       matchesPlayed += 1
-    }
 
-    else if (parity === 'no' && answer === 'no') {
-      console.log('Correct!')
-      matchesPlayed += 1
+      if (matchesPlayed === numberOfMatches) {
+        console.log(`Congratulations, ${name}!`)
+      }
     }
 
     else {
@@ -25,5 +24,4 @@ export const checkingParity = (name) => {
       break
     }
   }
-  console.log(`Congratulations, ${name}`)
 }
