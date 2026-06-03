@@ -25,7 +25,7 @@ const structureGame = () => {
   return { question: calculation, answer }
 }
 
-export const calc = (name) => {
+export const calcGames = (name) => {
   runGame({
     name,
     ruleGame: 'What is the result of the expression?',
