@@ -8,4 +8,5 @@ const name = playerName()
 console.log(`Hello, ${name}`)
 
 checkingParity(name)
+
 calc(name)
