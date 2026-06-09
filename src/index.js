@@ -1,20 +1,20 @@
 import readlineSync from 'readline-sync'
 import { greetingUser } from './cli.js'
 
-const questionAndAnswer = (value) => {
+export const questionAndAnswer = (value) => {
   console.log(`Question: ${value}`)
   return readlineSync.question('Your answer: ')
 }
 
-const showWrongAnswer = (answerUser, answer, name) => {
+export const showWrongAnswer = (answerUser, answer, name) => {
   console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}`)
 }
 
-const showCorrectAnswer = () => {
+export const showCorrectAnswer = () => {
   console.log('Correct!')
 }
 
-const win = (name) => {
+export const win = (name) => {
   console.log(`Congratulations, ${name}!`)
 }
 
