@@ -4,21 +4,22 @@ const progression = () => {
   const numberStart = randomNumber(1, 100)
   const step = randomNumber(1, 10)
   const progressionLength = 10
-  const arrProgression = []
+  let numberSeries = []
 
   for (let i = 0; i < progressionLength; i++) {
-    arrProgression.push(numberStart + i * step)
+    const numberProgression = (numberStart + i * step)
+    numberSeries.push(numberProgression)
   }
-  return arrProgression
+  return numberSeries
 }
 
 const unknownInProgression = () => {
-  const arrayTask = progression()
+  const seriesOfProgressions = progression()
   const unknownIndex = randomNumber(0, 9)
-  const answer = arrayTask[unknownIndex]
-  const questionArray = [...arrayTask]
+  const answer = seriesOfProgressions[unknownIndex]
+  const questionArray = [...seriesOfProgressions]
   questionArray[unknownIndex] = '..'
-  return { question: questionArray, answer }
+  return { question: questionArray.join(' '), answer }
 }
 
 export const progressionGames = () => {
@@ -27,3 +28,5 @@ export const progressionGames = () => {
     generateRoundData: unknownInProgression,
   })
 }
+
+console.log(unknownInProgression())
