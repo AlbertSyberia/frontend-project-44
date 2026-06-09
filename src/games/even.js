@@ -1,5 +1,5 @@
 import { questionAndAnswer, randomNumber, win, showWrongAnswer, showCorrectAnswer } from '../../src/index.js'
-import { greetingUser } from '../src/cli.js'
+import { greetingUser } from '../cli.js'
 
 export const checkingParity = () => {
   const name = greetingUser()
