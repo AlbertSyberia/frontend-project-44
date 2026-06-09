@@ -7,7 +7,7 @@ export const questionAndAnswer = (value) => {
 }
 
 export const showWrongAnswer = (answerUser, answer, name) => {
-  console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}`)
+  console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`)
 }
 
 export const showCorrectAnswer = () => {
