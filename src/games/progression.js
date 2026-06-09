@@ -21,9 +21,8 @@ const unknownInProgression = () => {
   return { question: questionArray, answer }
 }
 
-export const progressionGames = (name) => {
+export const progressionGames = () => {
   runGame({
-    name,
     ruleGame: 'What number is missing in the progression?',
     generateRoundData: unknownInProgression,
   })

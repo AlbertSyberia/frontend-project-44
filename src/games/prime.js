@@ -26,9 +26,8 @@ const primeNumber = () => {
   return { question: num, answer }
 }
 
-export const primeNumberGame = (name) => {
+export const primeNumberGame = () => {
   runGame ({
-    name,
     ruleGame: 'Answer "yes" if given number is prime. Otherwise answer "no".',
     generateRoundData: primeNumber,
   })

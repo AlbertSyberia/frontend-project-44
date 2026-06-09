@@ -1,8 +1,21 @@
 import readlineSync from 'readline-sync'
+import { greetingUser } from './cli.js'
 
-export const questionAndAnswer = (value) => {
+const questionAndAnswer = (value) => {
   console.log(`Question: ${value}`)
   return readlineSync.question('Your answer: ')
+}
+
+const showWrongAnswer = (answerUser, answer, name) => {
+  console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}`)
+}
+
+const showCorrectAnswer = () => {
+  console.log('Correct!')
+}
+
+const win = (name) => {
+  console.log(`Congratulations, ${name}!`)
 }
 
 export const randomNumber = (min = 1, max = 100) => {
@@ -15,19 +28,8 @@ export const randomOperator = () => {
   return operators[selectedOperator]
 }
 
-export const showWrongAnswer = (answerUser, answer, name) => {
-  console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}`)
-}
-
-export const showCorrectAnswer = () => {
-  console.log('Correct!')
-}
-
-export const win = (name) => {
-  console.log(`Congratulations, ${name}!`)
-}
-
-export const runGame = ({ name, ruleGame, generateRoundData }) => {
+export const runGame = ({ ruleGame, generateRoundData }) => {
+  const name = greetingUser()
   console.log(ruleGame)
   let matchesPlayed = 0
   const numberOfMatches = 3

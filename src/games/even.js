@@ -1,6 +1,9 @@
 import { questionAndAnswer, randomNumber, win, showWrongAnswer, showCorrectAnswer } from '../../src/index.js'
+import { greetingUser } from '../src/cli.js'
 
-export const checkingParity = (name) => {
+export const checkingParity = () => {
+  const name = greetingUser()
+
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
   let matchesPlayed = 0
   const numberOfMatches = 3

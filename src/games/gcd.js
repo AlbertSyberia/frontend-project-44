@@ -17,9 +17,8 @@ const gcd = () => {
   return { question: numbers, answer }
 }
 
-export const gcdGames = (name) => {
+export const gcdGames = () => {
   runGame({
-    name,
     ruleGame: 'Find the greatest common divisor of given numbers.',
     generateRoundData: gcd,
   })
